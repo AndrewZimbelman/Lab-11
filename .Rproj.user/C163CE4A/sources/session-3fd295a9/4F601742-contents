@@ -1,0 +1,32 @@
+---
+title: "Lab_6.qmd"
+format: 
+  html:
+    self-contained: TRUE
+execute:
+  echo: TRUE 
+editor: visual
+---
+
+## 
+
+#Downloading File
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(powerjoin)
+library(glue)
+library(vip)
+library(baguette)
+root  <- 'https://gdex.ucar.edu/dataset/camels/file'
+download.file('https://gdex.ucar.edu/dataset/camels/file/camels_attributes_v2.0.pdf',
+              'data/camels_attributes_v2.0.pdf')
+types <- c("clim", "geol", "soil", "topo", "vege", "hydro")
+remote_files  <- glue('{root}/camels_{types}.txt')
+local_files   <- glue("'data'/camels_{types}.txt")
+walk2(remote_files, local_files, download.file, quiet = TRUE)
+camels <- map(local_files, read_delim, show_col_types = FALSE) 
+
+
+```

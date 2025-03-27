@@ -1,0 +1,10 @@
+"0","download.file('https://gdex.ucar.edu/dataset/camels/file/camels_attributes_v2.0.pdf',"
+"0","              'data/camels_attributes_v2.0.pdf')"
+"2","trying URL 'https://gdex.ucar.edu/dataset/camels/file/camels_attributes_v2.0.pdf'
+"
+"2","Content type 'application/pdf;charset=UTF-8'"
+"2"," length 91532 bytes (89 KB)
+"
+"2","downloaded 89 KB
+
+"
