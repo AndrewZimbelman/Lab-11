@@ -1,0 +1,12 @@
+---
+title: "Lab_6.qmd"
+format: 
+  html:
+    self-contained: TRUE
+execute:
+  echo: TRUE 
+  
+editor: visual
+---
+
+## 
